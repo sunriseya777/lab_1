@@ -50,20 +50,19 @@ int main()
     double dolg;
     double crok;
     double procent;
-    int i;
     double p;
-    cin >> dolg;
-    cin >> crok;
-    cin >> procent;
-    double k = procent / crok / 100;
-    double x = dolg / crok;
+    scanf("%lf", &dolg);
+    scanf("%lf", &crok);
+    scanf("%lf", &procent);
+    double k1 = procent / crok / 100;
+    double x1 = dolg / crok;
 
     for (double i = 0; i < crok; i++) {
-        double p = dolg * k;
-        double plata = x + p;
-        cout << fixed << setprecision(0)<< i + 1 << "   ";
-        cout << fixed << setprecision(2) << dolg << "   " << p << "   " << plata << endl;
-        dolg = dolg - x;
+        double p = dolg * k1;
+        double plata = x1 + p;
+        printf("%.0f   ", i + 1);
+        printf("%.2f   %.2f   %.2f\n", dolg, p, plata);
+        dolg = dolg - x1;
     }
 
     return 0;
